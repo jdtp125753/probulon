@@ -14,7 +14,7 @@
 
 **para el señor Alvaro Curipoma Tene**
 <br>
-<p>Necesito el logo de la empresa y los iconos a utilizar</p>
+<p>Necesito el logo de la empresa y los iconos a utilizar, gracias</p>
 
 
 </div>
