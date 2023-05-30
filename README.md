@@ -1,20 +1,38 @@
 <div align="center">
-# probulon
+
+# <img src="./image/p_bulon 1.PNG">
+
+<hr>
 
 **Finished login design**
 
 ## <img src="./image/Login.PNG">
 
+<hr>
+
 **Validators working correctly**
 
 ## <img src="./image/validators.PNG">
+
+<hr>
+
+**functional alert**
+
+## <img src="./image/Alerta.PNG">
+
+<hr>
+
+**Basis for password change**
+
+### <img src="./image/Change Pass.PNG">
+### <img src="./image/selectUser.PNG">
+### <img src="./image/seletedUser.PNG">
+
 </div>
 
 <div align="left">
 
-**para el señor Alvaro Curipoma Tene**
-<br>
-<p>Necesito el logo de la empresa y los iconos a utilizar, gracias</p>
+
 
 
 </div>

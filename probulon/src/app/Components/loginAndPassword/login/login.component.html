@@ -4,18 +4,23 @@
   </div>
   <div class="hr"></div>
   <div class="contend-form">
-      <h3 class="label" ><mat-icon>alternate_email</mat-icon> <label >Email</label> </h3>
+      <h3 class="label" ><img src="../../../../assets/At sign.png"> <label >Email</label> </h3>
       <input formControlName="email" class="input" type="email" >
       <label class="label-error" *ngIf="contenForm.controls['email'].invalid && contenForm.controls['email'].touched &&contenForm.controls['email'].dirty">*Escriba un correo electronico valido</label>
-    <h3 class="label"> <mat-icon> key </mat-icon> <label >Password</label></h3>
+    <h3 class="label"> <img src="../../../../assets/Key.png" > <label >Password</label></h3>
     <input formControlName="password" class="input" type="password">
     <label class="label-error" *ngIf="contenForm.controls['password'].invalid && contenForm.controls['password'].touched &&contenForm.controls['password'].dirty">*La contraceña es de seis digitos, entre dos números y cuatro letras</label>
   </div>
   <div class="contend-buton">
-    <button class="buton"><mat-icon>send</mat-icon> <label>enviar</label> </button><br>
-    <a href="#" class="link"> Olvide mi contraceña </a>
+    <button (click)="this.valid()" class="buton"><img src="../../../../assets/Sent.png" > <label>enviar</label> </button><br>
+    <a routerLink="/home/change" class="link"> Olvide mi contraceña </a>
   </div>
 </form>
+<div class="alert" *ngIf="this.valida==false">
+  <div class="bar"></div>
+  <p class="text"> {{valid()}} </p>
+  <button (click)="this.valida = true" class="buton">X</button>
+</div>
 <footer class="footer-login">
  <label >&copy;2023</label>|<label>PROBULON</label>|<label>España</label>|<label>todos los derechos reservados</label>
 </footer>
