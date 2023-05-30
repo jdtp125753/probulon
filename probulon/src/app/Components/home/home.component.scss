@@ -1,0 +1,19 @@
+
+.contend-all{
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(255, 255, 244);
+    .content-paren{
+        width: 40%;
+        margin-left: 3%;
+        margin-top: 1%;
+    }
+    .icon-gread{
+        width: 15%;
+        margin-top: 15%;
+        margin-left: -15%;
+    }
+}

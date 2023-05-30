@@ -1,0 +1,21 @@
+<form [formGroup]="contenForm" class="contend">
+  <div class="contend-title">
+    <h1 class="title">Iniciar Sesión</h1>
+  </div>
+  <div class="hr"></div>
+  <div class="contend-form">
+      <h3 class="label" ><mat-icon>alternate_email</mat-icon> <label >Email</label> </h3>
+      <input formControlName="email" class="input" type="email" >
+      <label class="label-error" *ngIf="contenForm.controls['email'].invalid && contenForm.controls['email'].touched &&contenForm.controls['email'].dirty">*Escriba un correo electronico valido</label>
+    <h3 class="label"> <mat-icon> key </mat-icon> <label >Password</label></h3>
+    <input formControlName="password" class="input" type="password">
+    <label class="label-error" *ngIf="contenForm.controls['password'].invalid && contenForm.controls['password'].touched &&contenForm.controls['password'].dirty">*La contraceña es de seis digitos, entre dos números y cuatro letras</label>
+  </div>
+  <div class="contend-buton">
+    <button class="buton"><mat-icon>send</mat-icon> <label>enviar</label> </button><br>
+    <a href="#" class="link"> Olvide mi contraceña </a>
+  </div>
+</form>
+<footer class="footer-login">
+ <label >&copy;2023</label>|<label>PROBULON</label>|<label>España</label>|<label>todos los derechos reservados</label>
+</footer>
