@@ -1,8 +1,10 @@
-export class ChangePassword {
-    _name: string; 
-    _email: string; 
-    constructor(name: string = '', email: string = ''){
-        this._name = name; 
-        this._email = email; 
+export class Change {
+    id: number;
+    name: string; 
+    email: string; 
+    constructor(id:number = 0, name: string = '', email: string = ''){
+        this.id = id; 
+        this.name = name; 
+        this.email = email; 
     }
 }

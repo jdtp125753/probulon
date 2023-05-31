@@ -1,0 +1,71 @@
+<form [formGroup]="contenForm" class="contend">
+  <button routerLink="/home/change" class="buton">
+    <img src="../../../../assets/Chevron Left.png" alt="left" />
+  </button>
+  <div class="contend-title">
+    <h1 class="title">Cambiar mi Contraceña</h1>
+  </div>
+  <div class="hr"></div>
+  <div class="contend-form">
+    <label>Se envio su correo un codigo necesario, para restablecer la contraceña</label>
+    <h2>Codigo</h2>
+    <input class="input" type="email" formControlName="email" />
+    <label
+      class="label-error"
+      *ngIf="
+        contenForm.controls['code'].invalid &&
+        contenForm.controls['code'].touched &&
+        contenForm.controls['code'].dirty
+      "
+      >*ese codigo nisiquiera es valido</label
+    >
+    <div class="contend-pass">
+        <div class="conten-pass-chill">
+            <h2>Password</h2>
+            <input class="input-pass" type="email" formControlName="password" />
+            <label
+              class="label-error"
+              *ngIf="
+                contenForm.controls['code'].invalid &&
+                contenForm.controls['code'].touched &&
+                contenForm.controls['code'].dirty
+              "
+              >*ese codigo nisiquiera es valido</label
+            >
+        </div>
+        <div class="conten-pass-chill">
+            <h2>Confirm Password</h2>
+            <input class="input-pass" type="email" formControlName="comfirmPassword" />
+            <label
+              class="label-error"
+              *ngIf="
+                contenForm.controls['code'].invalid &&
+                contenForm.controls['code'].touched &&
+                contenForm.controls['code'].dirty
+              "
+              >*ese codigo nisiquiera es valido</label
+            >
+        </div>
+    </div>
+    <div class="contend-buton">
+      <button
+        class="buton"
+        [disabled]="this.contenForm.invalid"
+        
+      >
+        <img src="../../../../assets/Sent.png" alt="search client" />
+        <label>Cambiar Contraceña</label>
+      </button>
+    </div>
+  </div>
+</form>
+<div class="alert" *ngIf="this.valida == false">
+  <div class="bar"></div>
+  <p class="text"></p>
+  <button (click)="this.valida = true" class="buton">X</button>
+</div>
+<footer class="footer-login">
+  <label>&copy;2023</label>|<label>PROBULON</label>|<label>España</label>|<label
+    >todos los derechos reservados</label
+  >
+</footer>

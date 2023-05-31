@@ -22,11 +22,24 @@
 
 <hr>
 
-**Basis for password change**
+**Screen to send the code and retrieve the password, it is ready for the backend**
 
-### <img src="./image/Change Pass.PNG">
-### <img src="./image/selectUser.PNG">
-### <img src="./image/seletedUser.PNG">
+## <img src="./image/recuPass-list.PNG">
+
+**displays a list of existing users**
+
+## <img src="./image/recuPass-list-user.PNG">
+
+**If it is not written correctly an email gives the warning**
+
+## <img src="./image/recuPass-list-error.PNG">
+
+**Note: the button only works if an email is copied well**
+
+<hr>
+
+**Base screen to recover password**
+### <img src="./image/recuPass-base.PNG">
 
 </div>
 

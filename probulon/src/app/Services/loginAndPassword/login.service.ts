@@ -1,6 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-const probulonUrl = ""
+const probulonUrl = "http://localhost:3000/users"
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,6 @@ const probulonUrl = ""
 
 export class LoginService {
 
-  constructor() {
-
-  }
+  constructor( private http: HttpClient) {}
+  
 }

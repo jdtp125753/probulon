@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { debounce, debounceTime } from 'rxjs';
+import { debounceTime } from 'rxjs';
 import { Change } from 'src/app/Models/change.model';
 import { ChangePasswordService } from 'src/app/Services/loginAndPassword/change-password.service';
 
 @Component({
-  selector: 'app-change-password',
-  templateUrl: './change-password.component.html',
-  styleUrls: ['./change-password.component.scss'],
+  selector: 'app-confirm-change',
+  templateUrl: './confirm-change.component.html',
+  styleUrls: ['./confirm-change.component.scss']
 })
-export class ChangePasswordComponent implements OnInit {
+export class ConfirmChangeComponent implements OnInit{
   contenForm: FormGroup;
   valida: boolean = true;
   code: boolean = true;
@@ -28,11 +28,13 @@ export class ChangePasswordComponent implements OnInit {
   validOrInvalid: string;
   constructor(private servi: ChangePasswordService, private route: Router) {
     this.contenForm = new FormGroup({
-      email: new FormControl('', [
-        Validators.required,
+      code: new FormControl('', [
         Validators.pattern(
-          /^((([!#$%&'*+\-/=?^_`{|}~\w])|([!#$%&'*+\-/=?^_`{|}~\w][!#$%&'*+\-/=?^_`{|}~\.\w]{0,}[!#$%&'*+\-/=?^_`{|}~\w]))[@]\w+([-.]\w+)*\.\w+([-.]\w+)*)$/
+          /^.*(?=.{6,10})(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])(?=.*\d.*\d).*$/
         ),
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(6),
       ]),
     });
   }
@@ -41,9 +43,7 @@ export class ChangePasswordComponent implements OnInit {
     this.contenForm.controls['email'].setValue(user.email); 
     this.codeEmail = false; 
   }
-  recuPassword(){
-    this.route.navigate(['/home/confirm/'])
-  }
+  
   ngOnInit(): void {
     this.searchInput();
   }
