@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="./image/p_bulon 1.PNG">
+# <img src="./image/p_bulon 1.png">
 
 <hr>
 
