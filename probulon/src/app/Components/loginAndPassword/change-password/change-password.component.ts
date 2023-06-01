@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { debounce, debounceTime } from 'rxjs';
+import { catchError, debounce, debounceTime } from 'rxjs';
 import { Change } from 'src/app/Models/change.model';
 import { ChangePasswordService } from 'src/app/Services/loginAndPassword/change-password.service';
 
@@ -20,11 +20,12 @@ export class ChangePasswordComponent implements OnInit {
   passwording: boolean = false; 
   users: Change[];
   useris: Change[];
-  usr: Change;
-  
+  @Output() usrOutput: EventEmitter<Change>;
+  usr: Change; 
   names: string; 
   emails: string; 
   mensage: string;
+  detail: string; 
   validOrInvalid: string;
   constructor(private servi: ChangePasswordService, private route: Router) {
     this.contenForm = new FormGroup({
@@ -35,6 +36,7 @@ export class ChangePasswordComponent implements OnInit {
         ),
       ]),
     });
+    this.usrOutput = new EventEmitter(); 
   }
 
   emailSelect(user: Change) {
@@ -42,47 +44,29 @@ export class ChangePasswordComponent implements OnInit {
     this.codeEmail = false; 
   }
   recuPassword(){
-    this.route.navigate(['/home/confirm/'])
+    let emaili: string = this.contenForm.controls['email'].value;
+    this.usr = new Change(emaili); 
+    this.servi.em(this.usr.email); 
+    this.servi.sendCode(this.usr).subscribe((querry)=> {
+       this.mensage = querry.message.summary; 
+       this.detail = querry.message.detail;
+       if(querry.message.statusCode==200){
+         console.log(this.mensage + ' Detalle: ' + this.detail);
+         this.route.navigate(['/home/confirm/']);
+         this.usrOutput.emit(this.usr);
+       }
+    },
+    (error)=>{
+      alert('se produjo un error = '+ error.error.message.summary +', Detalle = ' + error.error.message.detail);
+      
+      console.error('se produjo un error', error.error.message.detail); 
+    }
+    );
   }
   ngOnInit(): void {
-    this.searchInput();
+   
   }
-  searchInput() {
-    this.contenForm.controls['email'].valueChanges
-      .pipe(debounceTime(1000))
-      .subscribe((querry: string) => {
-        this.servi.searchUser(querry).subscribe((result) => {
-          this.users = result;
-        });
-        let filterEmail = this.users.filter((user)=>user.email==querry);
-        this.useris = filterEmail; 
-        if(this.codeEmail == true){
-          this.code = false; 
-        }else{
-          this.code = true; 
-        }
-      });
-  }
+  
 
-  /* 
-  valid(): string {
-    let emaili: string = this.contenForm.controls['email'].value;
-    let passwordi: string = this.contenForm.controls['password'].value;
-
-    if (this.user._email != emaili && this.user._password != passwordi) {
-      this.validOrInvalid = "El usuario es Invalido";
-      this.valida = false;
-    } else if (this.user._password != passwordi) {
-      this.validOrInvalid = 'Su contraceña es incorrecta';
-      this.valida = false;
-    } else if (this.user._email != emaili) {
-      this.validOrInvalid = 'su correo electronico es incorrecto';
-      this.valida = false;
-    } else {
-      this.validOrInvalid = 'El usuario es valido';
-      this.valida = false;
-    }
-    return this.validOrInvalid;
-  } 
-  */
+  
 }

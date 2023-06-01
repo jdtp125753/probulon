@@ -1,134 +1,188 @@
 .contend {
-    width: 95%;
-    border-radius: 1rem;
-    padding: 2%;
-    padding-top: 5%;
-    box-shadow: 0.3rem 0.5rem 1rem rgba($color: #3d3d3d, $alpha: 1);
-    .buton {
-      border: none;
-      margin-left: 3%;
-      background-color: transparent;
-      margin-top: -10%;
-    }
-  
-    .contend-title {
-      text-align: center;
-      margin: 8%;
-      .title {
-        font-size: 180%;
-      }
-    }
-  
-    .hr {
-      margin: auto;
-      width: 95%;
-      margin-top: -4%;
-      height: 0.2rem;
-      background-color: black;
-    }
-    .contend-form {
-      margin: 2%;
-      padding-top: 4%;
-      
-      h2{
-        width: 45%;
-        font-size: 120%;
-      }
-      
-      .contend-pass{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        .conten-pass-chill{
-            width: 45%;
-            h2{
-                width: 100%;
-            }
-        }
-    }
-      .input {
-        width: 100%;
-        height: 35px;
-        border: solid 0.5px;
-        border-radius: 0.2rem;
-      }
-      .input.ng-invalid.ng-touched.ng-dirty {
-        border: solid 0.5px red;
-      }
-      .label-error {
-        position: absolute;
-        color: red;
-        margin-top: 2.5%;
-        margin-left: -28%;
-        font-size: 80%;
-      }
-    }
-    .contend-buton {
-      padding-top: 8%;
-      margin: 2%;
-      text-align: center;
-      padding-bottom: 0.5%;
-      .buton {
-        width: 100%;
-        border: none;
-        border-radius: 1rem;
-        background-color: rgb(250, 33, 25);
-        text-align: center;
-        color: white;
-        img {
-          margin-top: 0.5%;
-          margin-left: -35%;
-          cursor: pointer;
-        }
-        label {
-          position: absolute;
-          font-size: 110%;
-          margin-top: 0.2%;
-          margin-left: 0.5%;
-          cursor: pointer;
-        }
-      }
-      .link {
-        color: rgb(255, 22, 22);
-      }
-    }
+  width: 98%;
+  border-radius: 1rem;
+  padding: 2%;
+  padding-bottom: 25%;
+  padding-top: 10%;
+  box-shadow: 0.3rem 0.5rem 1rem rgba($color: #3d3d3d, $alpha: 1);
+
+  .buton {
+    border: none;
+    margin-left: 3%;
+    background-color: transparent;
+    margin-top: -10%;
   }
-  .alert {
-    width: 25%;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 40%;
-    margin-top: -40%;
-    padding: 2%;
-    justify-content: center;
-    .bar {
-      background-color: rgb(182, 3, 3);
-      width: 13%;
-      border-left: solid 1rem rgb(104, 1, 1);
-    }
-    .text {
-      margin-top: 2%;
-      margin-left: 3%;
-    }
-    .buton {
-      border: none;
-      margin-left: 3%;
-      background-color: transparent;
-      margin-top: -10%;
-    }
-  }
-  .footer-login {
-    position: fixed;
-    margin-left: -35.5%;
-    width: 100%;
-    padding: 0.2%;
+
+  .contend-title {
     text-align: center;
-    bottom: 0%;
-    font-size: 90%;
-    box-shadow: 0rem 1rem 2rem 0.5rem;
-    label {
-      margin: 0.2%;
+    margin: 8%;
+    .title {
+      font-size: 180%;
     }
   }
-  
+
+  .hr {
+    margin: auto;
+    width: 95%;
+    margin-top: -4%;
+    height: 0.2rem;
+    background-color: black;
+  }
+  .warningood {
+    font-size: 80%;
+    margin-left: 5%;
+    margin-top: 1%;
+    color: rgb(224, 4, 4);
+  }
+  .contend-form {
+    margin: 2%;
+    padding-top: 4%;
+    h2 {
+      width: 45%;
+      font-size: 110%;
+      margin-left: 2%;
+    }
+
+    .contend-pass {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10%;
+      text-align: center;
+      .conten-pass-chill {
+        width: 50%;
+
+        padding: 0.5%;
+        h2 {
+          font-size: 110%;
+          width: 100%;
+        }
+        .input-pass {
+         
+          
+          border: solid 0.01px rgba(0, 0, 0, 0.61);
+          border-radius: 1.4rem;
+          text-align: center;
+        }
+        .label-error {
+            position: relative;
+            width: 100%;
+            height: 35%;
+            font-size: 90%;
+            margin-top: 1%;
+            padding-top: -1%;
+            margin-left: 5%;
+            text-align: center;
+            border-radius: 0.5rem;
+            color: rgb(240, 6, 6);
+            overflow: hidden ;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .label-error-p {
+          
+          width: 100%;
+          height: 35%;
+          font-size: 90%;
+          margin-top: 1%;
+          padding-top: -1%;
+          text-align: center;
+          border-radius: 0.5rem;
+          color: rgb(240, 6, 6);
+          overflow: hidden ;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+      }
+    }
+    .label-error {
+      position: absolute;
+      color: red;
+      margin-top: 2.5%;
+      margin-left: -28%;
+      font-size: 80%;
+    }
+    .input {
+      width: 100%;
+      height: 35px;
+      border: solid 0.5px rgba(0, 0, 0, 0.61);
+      border-radius: 1.5rem;
+      text-align: center;
+    }
+
+    .input.ng-invalid.ng-touched.ng-dirty {
+      border: solid 0.5px red;
+    }
+  }
+  .contend-buton {
+    position: absolute;
+    width: 30%;
+    padding-top: 3%;
+    margin: 2%;
+    margin-top: 1.5%;
+    margin-left: -0.5%;
+    text-align: center;
+    padding-bottom: 0.5%;
+    .buton {
+      width: 100%;
+      border: none;
+      border-radius: 1rem;
+      background-color: rgb(250, 33, 25);
+      text-align: center;
+      color: white;
+      img {
+        margin-top: 0.5%;
+        margin-left: -35%;
+        cursor: pointer;
+      }
+      label {
+        position: absolute;
+        font-size: 110%;
+        margin-top: 0.2%;
+        margin-left: 0.5%;
+        cursor: pointer;
+      }
+    }
+    .link {
+      color: rgb(255, 22, 22);
+    }
+  }
+}
+.alert {
+  width: 25%;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40%;
+  margin-top: -40%;
+  padding: 2%;
+  justify-content: center;
+  .bar {
+    background-color: rgb(182, 3, 3);
+    width: 13%;
+    border-left: solid 1rem rgb(104, 1, 1);
+  }
+  .text {
+    margin-top: 2%;
+    margin-left: 3%;
+  }
+  .buton {
+    border: none;
+    margin-left: 3%;
+    background-color: transparent;
+    margin-top: -10%;
+  }
+}
+.footer-login {
+  position: fixed;
+  margin-left: -35.5%;
+  width: 100%;
+  padding: 0.2%;
+  text-align: center;
+  bottom: 0%;
+  font-size: 90%;
+  box-shadow: 0rem 1rem 2rem 0.5rem;
+  label {
+    margin: 0.2%;
+  }
+}

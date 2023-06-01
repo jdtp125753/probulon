@@ -4,7 +4,7 @@
 
 <hr>
 
-**Finished login design**
+**The login screen is already integrated with the backend**
 
 ## <img src="./image/Login.PNG">
 
@@ -20,32 +20,52 @@
 
 ## <img src="./image/Alerta.PNG">
 
+**Integration with the Backend when the user is valid**
+## <img src="./image/Login-correct.PNG">
+
+**Integration with the Backend when the user is invalid**
+## <img src="./image/Login-invalid.PNG">
+
 <hr>
 
-**Screen to send the code and retrieve the password, it is ready for the backend**
+**Screen to send the message of the code to the mail is already integrated with the Backend**
 
-## <img src="./image/recuPass-list.PNG">
+## <img src="./image/Change Pass.PNG">
 
-**displays a list of existing users**
-
-## <img src="./image/recuPass-list-user.PNG">
 
 **If it is not written correctly an email gives the warning**
 
 ## <img src="./image/recuPass-list-error.PNG">
 
+**Integration with the Backend When it is valid**
+## <img src="./image/Change Pass-valid.PNG">
+
+**Integration with the Backend When it is invalid**
+## <img src="./image/Change Pass-invalid.PNG"> <br> Genera una alerta automatica
+
 **Note: the button only works if an email is copied well**
+
+
 
 <hr>
 
-**Base screen to recover password**
-### <img src="./image/recuPass-base.PNG">
+**The screen to confirm the change of contraceña is already integrated with the backend**
+
+## <img src="./image/RecuPassword.PNG">
+
+**Integration with the Backend When it is valid**
+
+## <img src="./image/RecuPassword-valid.PNG">
+
+**Integration with the Backend When it is invalid**
+
+## <img src="./image/RecuPassword-invalid.PNG">
 
 </div>
 
 <div align="left">
 
-
+**What is missing: They are missing that the alerts are intengren with the backend**
 
 
 </div>
