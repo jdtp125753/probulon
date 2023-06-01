@@ -1,0 +1,71 @@
+<form [formGroup]="contenForm" class="contend">
+  <button routerLink="/home/change" class="buton">
+    <img src="../../../../assets/Chevron Left.png" alt="left" />
+  </button>
+  <div class="contend-title">
+    <h1 class="title">Cambiar mi Contraceña</h1>
+  </div>
+  <div class="hr"></div>
+  <label class="warningood">Se envio en su correo un codigo necesario, para restablecer la contraceña</label>
+  <div class="contend-form">
+    <h2>Codigo</h2>
+    <input class="input" type="email" formControlName="code" />
+    <label
+      class="label-error"
+      *ngIf="
+        contenForm.controls['code'].invalid &&
+        contenForm.controls['code'].touched &&
+        contenForm.controls['code'].dirty
+      "
+      >*ese codigo nisiquiera es valido</label
+    >
+    <div class="contend-pass">
+        <div class="conten-pass-chill">
+            <h2><img src="../../../../assets/Key.png" alt="key" /> Contraceña</h2>
+            <input class="input-pass" type="email" formControlName="password" />
+            <p
+              class="label-error-p"
+              *ngIf="
+                contenForm.controls['password'].invalid &&
+                contenForm.controls['password'].touched &&
+                contenForm.controls['password'].dirty
+              "
+              >*La contraceña debe de ser de 6 digitos entre 2 numeros y 4 letras</p
+            >
+        </div>
+        <div class="conten-pass-chill">
+            <h2><img src="../../../../assets/Key.png" alt="key" />Confirmar Contraceña</h2>
+            <input class="input-pass" type="email" formControlName="confirmPassword" />
+            <label
+              class="label-error"
+              *ngIf="
+                contenForm.controls['confirmPassword'].invalid &&
+                contenForm.controls['confirmPassword'].touched &&
+                contenForm.controls['confirmPassword'].dirty
+              "
+              >*Escribe la contraceña anterior otra vez</label
+            >
+        </div>
+    </div>
+    <div class="contend-buton">
+      <button
+        class="buton"
+        (click)="changePassword()"
+        [disabled]="contenForm.controls['confirmPassword'].invalid &&  contenForm.controls['password'].invalid "
+      >
+        <img src="../../../../assets/Sent.png" alt="search client" />
+        <label>Cambiar Contraceña</label>
+      </button>
+    </div>
+  </div>
+</form>
+<div class="alert" *ngIf="this.valida == false">
+  <div class="bar"></div>
+  <p class="text"></p>
+  <button (click)="this.valida = true" class="buton">X</button>
+</div>
+<footer class="footer-login">
+  <label>&copy;2023</label>|<label>PROBULON</label>|<label>España</label>|<label
+    >todos los derechos reservados</label
+  >
+</footer>
